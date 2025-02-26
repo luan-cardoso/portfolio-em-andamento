@@ -5,7 +5,7 @@ const IntroRight = () => {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <Topic kanji="自分" text="Introducing Myself." />
+        <Topic text="Introducing Myself." />
       </div>
       <div>
         <p className="text-4xl font-[Inter] tracking-wider">

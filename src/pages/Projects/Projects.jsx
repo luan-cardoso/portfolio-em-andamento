@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../Card/Card";
-import Topic from "../Topic/Topic";
 import useStarredRepos from "../../hooks/useStarredRepos";
+import Topic from "../../components/Topic/Topic";
+import Card from "../../components/Card/Card";
 
 const Projects = () => {
   const { repos } = useStarredRepos();

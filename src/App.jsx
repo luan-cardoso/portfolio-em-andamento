@@ -1,14 +1,18 @@
 import "./App.css";
-import Home from "./components/Home/Home";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/index.jsx";
 import Nav from "./components/Nav/Nav";
 
-function App() {
+const App = () => {
   return (
-    <div className="flex flex-col items-center overflow-hidden">
-      <Nav />
-      <Home />
-    </div>
+    <Router> {/* Agora o Router engloba tudo */}
+      <React.StrictMode>
+        <Nav />
+        <AppRoutes />
+      </React.StrictMode>
+    </Router>
   );
-}
+};
 
 export default App;

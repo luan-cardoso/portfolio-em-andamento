@@ -1,6 +1,6 @@
 import React from "react";
-import IntroLeft from "../IntroLeft/IntroLeft";
-import IntroRight from "../IntroRight/IntroRight";
+import IntroLeft from "../../components/IntroLeft/IntroLeft";
+import IntroRight from "../../components/IntroRight/IntroRight";
 
 const Intro = () => {
   return (

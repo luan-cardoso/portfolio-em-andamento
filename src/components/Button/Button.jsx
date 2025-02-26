@@ -9,7 +9,7 @@ const Button = (props) => {
           <span>{props.name}</span>
         </button>
       </a>
-    </StyledWrapper>
+    </StyledWrapper> 
   );
 };
 
@@ -20,8 +20,6 @@ const StyledWrapper = styled.div`
     --btn-transition: 0.3s;
     --btn-letter-spacing: 2px;
     --btn-animation-duration: 1s;
-    --btn-shadow-color: rgba(0, 0, 0, 0.137);
-    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
     --hover-btn-color: #8968ff;
     --default-btn-color: #cecece;
     --font-size: 14px;
