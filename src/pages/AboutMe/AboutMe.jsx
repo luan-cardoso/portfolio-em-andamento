@@ -3,8 +3,8 @@ import Topic from "../../components/Topic/Topic";
 
 const AboutMe = () => {
   return (
-    <div className="">
-      <Topic kanji="学生" text="About Me." />
+    <div className="mt-20">
+      <Topic text="About Me." />
       <p>
         Quem você é, sua formação e o que te atrai no desenvolvimento de
         software.

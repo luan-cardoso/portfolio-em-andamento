@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Card = (props) => {
   return (
@@ -7,9 +10,18 @@ const Card = (props) => {
       <div className="cookieCard">
         <p className="cookieHeading">{props.name}</p>
         <p className="cookieDescription">{props.description}</p>
-        <a href={props.html_url} className="acceptButton">
-          Ver no github
-        </a>
+        <div className="buttonContainer">
+          <Button name="Ver no GitHub" href={props.href} />
+          {props.deploy && ( // Só renderiza o <a> se props.deploy tiver um valor válido
+            <a
+              href={props.deploy}
+              className="text-[#bbb] hover:text-[#f1f1f1] duration-300 cursor-pointer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGlobe} size="lg" />
+            </a>
+          )}
+        </div>
       </div>
     </StyledWrapper>
   );
@@ -19,11 +31,10 @@ const StyledWrapper = styled.div`
   .cookieCard {
     width: 260px;
     height: 280px;
-    background: linear-gradient(to right, #8968ff, #af98ff);
+    background: #333333;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 15px;
     padding: 20px;
     position: relative;
@@ -55,35 +66,18 @@ const StyledWrapper = styled.div`
   }
 
   .cookieDescription {
-    color: rgb(241, 241, 241);
+    color: #bbb;
     z-index: 2;
     line-height: 20px;
+    flex-grow: 1;
   }
 
-  .cookieDescription a {
-    color: rgb(241, 241, 241);
-  }
-
-  .acceptButton {
-    padding: 8px 20px;
-    border-radius: 4px;
-    background-color: #7b57ff;
-    transition-duration: 0.2s;
-    border: none;
-    color: rgb(241, 241, 241);
-    cursor: pointer;
-    font-weight: 400;
-    letter-spacing: 1px;
-    position: absolute;
-    bottom: 20px;
-    left: 20%;
-    transform: translateX(-20%);
-    z-index: 2;
-  }
-
-  .acceptButton:hover {
-    background-color: #714aff;
-    transition-duration: 0.2s;
+  .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
   }
 `;
 

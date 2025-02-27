@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="flex items-center flex-row justify-around h-[100px] mb-36 w-full border-b border-[#ffffff14]">
-      <div />
+    <div className="flex items-center flex-row justify-between h-[100px] border-b border-[#ffffff14]">
       <h1 class="animate__animated animate__fadeInDown">
-      <div className="border border-[#ffffff14] px-8 py-3 rounded-[4px] flex flex-row gap-6 text-sm font-medium font-[Inconsolata] tracking-wider text-[#bbb]">
+      <div className="px-8 py-3 rounded-[4px] flex flex-row gap-6 text-sm font-medium font-[Inconsolata] tracking-widest text-[#bbb]">
         <Link to="/">
           <div className="hover:text-[#8968ff] hover:-translate-y-[2px] duration-300">
             Home
